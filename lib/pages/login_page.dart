@@ -1,3 +1,4 @@
+import 'package:doglife/pages/home_page.dart';
 import 'package:doglife/pages/reset-password_page.dart';
 import 'package:doglife/pages/signup_page.dart';
 import 'package:flutter/material.dart';
@@ -94,7 +95,6 @@ class LoginPage extends StatelessWidget {
                 ),
                 child: SizedBox.expand(
                   child: FlatButton(
-                    onPressed: null,
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[
@@ -114,6 +114,12 @@ class LoginPage extends StatelessWidget {
                           ),
                         )
                       ],
+                    ),
+                    onPressed: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => HomePage(),
+                      ),
                     ),
                   ),
                 ),
