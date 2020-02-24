@@ -1,4 +1,5 @@
 import 'package:doglife/pages/reset-password_page.dart';
+import 'package:doglife/pages/signup_page.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
@@ -160,12 +161,17 @@ class LoginPage extends StatelessWidget {
               height: 40,
               alignment: Alignment.center,
               child: FlatButton(
-                onPressed: null,
                 child: Text(
                   "Cadastre-se",
                   textAlign: TextAlign.right,
                   style: TextStyle(
                     color: Colors.black,
+                  ),
+                ),
+                onPressed: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => SignUpPage(),
                   ),
                 ),
               ),
